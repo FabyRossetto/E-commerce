@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UML">
+  <ClassDiagramComponents>
+    <Class name="User" package="" visibility="public" xPosition="33.0" yPosition="90.0">
+      <Fields>
+        <Field name="idCustomer" type="Long" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+        <Field name="address" type="String" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Product" package="" visibility="public" xPosition="792.0" yPosition="206.0">
+      <Fields>
+        <Field name="idProduct" type="Long" visibility="private"/>
+        <Field name="nameProduct" type="String" visibility="private"/>
+        <Field name="price" type="int" visibility="private"/>
+        <Field name="pic" type="Picture" visibility="private"/>
+        <Field name="features" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Order" package="" visibility="public" xPosition="312.0" yPosition="90.0">
+      <Fields>
+        <Field name="idOrder" type="String" visibility="private"/>
+        <Field name="Customer" type="String" visibility="private"/>
+        <Field name="ShoppingCart" type="List&lt;ShoppingCart&gt;" visibility="private"/>
+        <Field name="totalPrice" type="double" visibility="private"/>
+        <Field name="status" type="OrderStatus" visibility="private"/>
+        <Field name="dateOfPurchase" type="Date" visibility="private"/>
+        <Field name="ShippingAdress" type="String" visibility="private"/>
+        <Field name="ShippingWay" type="String" visibility="private"/>
+        <Field name="OrderSentForAcceptance" type="Boolean" visibility="private"/>
+        <Field name="comments" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cancelOrder" returnType="void" visibility="public"/>
+        <Method name="sentOrder" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ShoppingCart" package="" visibility="public" xPosition="594.0" yPosition="384.0">
+      <Fields>
+        <Field name="idShoppingCart" type="String" visibility="private"/>
+        <Field name="product" type="Product" visibility="private"/>
+        <Field name="Amount" type="Integer" visibility="private"/>
+        <Field name="priceProduct" type="Double" visibility="private"/>
+        <Field name="ProductsList" type="List" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="FillCart" returnType="void" visibility="public"/>
+        <Method name="removeProduct" returnType="void" visibility="public"/>
+        <Method name="validations" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Payment" package="" visibility="public" xPosition="294.0" yPosition="454.0">
+      <Fields>
+        <Field name="finalOrder" type="Order" visibility="private"/>
+        <Field name="methodOfPayment" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Manager" package="" visibility="public" xPosition="623.0" yPosition="13.0">
+      <Fields>
+        <Field name="idManager" type="Long" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="Password" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Picture" package="" visibility="public" xPosition="900.0" yPosition="485.0">
+      <Fields>
+        <Field name="idPic" type="Long" visibility="private"/>
+        <Field name="image" type="File" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="ShoppingCart" target="Product" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="Order" target="Product" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="ShoppingCart" target="Order" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Do" source="User" target="Order" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="Product" target="Picture" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="Order" target="Payment" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Manage" source="Manager" target="Product" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

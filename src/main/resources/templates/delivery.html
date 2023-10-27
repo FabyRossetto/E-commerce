@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/delivery.css">
+    <title>Delivery</title>
+</head>
+<body>
+    <section>
+        <h1 class="tituloSeccion">TIENDA</h1>
+        <h2 class="btnUbicacion__Titulo">Direccion de envio</h2>
+        <div class="btnTienda">
+            <img src="" alt="" class="btnTienda__icono">
+            <p class="btnTienda__texto">Tienda</p>
+        </div>
+        <div class="btnMiUbicacion">
+            <img src="" alt="" class="btnUbicacion__icono">
+            <p class="btnUbicacion__texto">Mi ubicacion actual</p>
+        </div>
+        <div class="domiciliosGuardados">
+            <h4 class="domiciliosGuardados__titulo">Mis domicilios guardados</h4>
+            <div class="domiciliosGuardados__domicilio">
+                <input type="checkbox" class="domiciliosGuardados__domicilio--check" id="domicilio_check">
+                <label class="domiciliosGuardados__domicilio--texto" for="domicilio_check"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, numquam.</label>
+            </div>
+        </div>
+        <h4 class="domicilioNuevoTitulo">Domicilio Nuevo</h4>
+        <form action="" class="nuevaDireccion">
+            <label for="" class="nuevaDireccion__labelCalle">Calle</label>
+            <input type="text" class="nuevaDireccion__inputCalle">
+            <label for="" class="nuevaDireccion__labelNumero">Altura</label>
+            <input type="text" class="nuevaDireccion__inputNumero">
+            <label for="" class="nuevaDireccion__labelCiudad">Ciudad</label>
+            <input type="text" class="nuevaDireccion__inputCiudad">
+            <label for="" class="nuevaDireccion__labelPais">Pais</label>
+            <input type="text" class="nuevaDireccion__inputDireccion">
+            <label for="" class="nuevaDireccion__labelCodigoPostal">Codigo postal</label>
+            <input type="text" class="nuevaDireccion__inputCodigoPostal">
+            <button class="nuevaDireccion__btnGuardar">Guardar</button>
+        </form>
+        <div class="contenedorMapa">
+            <div class="contenedorMapa__map"></div>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer></script>
+    <script src="/resources/static/js/mapa.js" defer></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaPimjSNLT64mwlXQ_PGyZAz0nWKsCNGY&callback=initMap"></script>
+    
+</body>
+</html>

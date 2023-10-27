@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.contenedorMapa{
+    width: 500px;
+    height: 375px;
+    background-color: aqua;
+}
+
+.contenedorMapa__map{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
